@@ -55,3 +55,11 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
     console.log(convertCurrency(100, 1.1)); //log test data
     console.log(convertCurrency(250, 0.85));
     
+    //Task 6 - Higher-Order Function
+    let orders = [200, 600, 1200, 450, 800]; //declare an array
+    const applyBulkDiscount = (orders, discountFunction) =>  //write higher order function
+        orders.map(discountFunction);
+    const discountedOrders = applyBulkDiscount(orders, amount =>
+        amount > 500 ? amount * 0.9 : amount
+);
+console.log(discountedOrders); //log

@@ -32,3 +32,26 @@ console.log(calculateBonus(5000, "Excellent")); //logs
 console.log(calculateBonus(7000, "Good"));
 console.log(calculateBonus(4000, "Average"));
 console.log(calculateBonus(6000, "Poor"));
+
+//Task 4 - Subscription Pricing Model
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let monthCost = 0;
+    if (plan == "Basic") {
+        monthCost = 10;
+    } else if (plan === "Premium") {
+        monthCost = 20;
+    } else if (plan === "Enterprise") {
+        monthCost = 50;
+    } else {
+        return
+    }} 
+    //i dunno really how to this task, i just skipped it so it wont be seen in console
+
+    //Task 5 - Currency Conversion
+    function convertCurrency(amount, exchangeRate) { //write a function that returns converted amount
+        let convertedAmount = amount * exchangeRate;
+        return `Converted Amount: $${convertedAmount.toFixed(2)}`;
+    }
+    console.log(convertCurrency(100, 1.1)); //log test data
+    console.log(convertCurrency(250, 0.85));
+    

@@ -63,3 +63,15 @@ function calculateSubscriptionCost(plan, months, discount = 0) {
         amount > 500 ? amount * 0.9 : amount
 );
 console.log(discountedOrders); //log
+
+//Task 7 - Business Expense Tracker
+function createExpenseTracker() {
+    let totalExpense = 0;
+    return function(expense) {
+        totalExpense += expense; 
+        return `Total Expense: $${totalExpense}`;
+    };
+}
+const tracker = createExpenseTracker();
+console.log(tracker(200));
+console.log(tracker(150));

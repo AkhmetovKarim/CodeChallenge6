@@ -75,3 +75,14 @@ function createExpenseTracker() {
 const tracker = createExpenseTracker();
 console.log(tracker(200));
 console.log(tracker(150));
+
+//Task 8 - Employee Promotion Evaluation
+function calculateYearsToPromotion(employeeLevel) { //write recursive function
+if (employeeLevel >= 10) {
+    return 0;
+}
+return 2 + calculateYearsToPromotion(employeeLevel +1); //each promotion takes 2 years
+}
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`);// Log test data
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`);
